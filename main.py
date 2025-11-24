@@ -7,7 +7,10 @@ print("*간단한 수 맞히기 게임*\n")
 answer = number_generator(5)
 
 while True:
-    player_guess = guess(5)
+    player_guess = guess()
+    if player_guess == 'admin':
+        print(answer)
+        continue
     print(score(player_guess, answer))
 
     if compare_num(player_guess, answer):
